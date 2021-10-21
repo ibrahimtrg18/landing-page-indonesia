@@ -5,9 +5,7 @@ export default function Navbar() {
   return (
     <AppBar>
       <div className="nav__logo">
-        <div className="nav__icon">
-          <Vector />
-        </div>
+        <Vector />
         <div className="nav__logo-text">Logo here</div>
       </div>
       <div className="nav__menu">
