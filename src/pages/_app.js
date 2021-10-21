@@ -8,8 +8,9 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body{
+  html, body{
     font-family: Helvetica;
+    font-size: 16px;
   }
 
   @font-face {
@@ -31,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   colors: {
-    primary: "#fafafa",
+    primary: "#3E2E83",
   },
 };
 
