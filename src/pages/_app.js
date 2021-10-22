@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 const theme = {
   colors: {
     text: "#8984A1",
+    borderInput: "#B2A7B8",
 
     primary: "#3E2E83",
     lightPrimary: "#776FC4",
