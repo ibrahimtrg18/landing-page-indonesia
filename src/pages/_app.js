@@ -3,9 +3,11 @@ import Layout from "../components/Layout";
 
 const theme = {
   colors: {
+    text: "#8984A1",
+
     primary: "#3E2E83",
     lightPrimary: "#776FC4",
-    text: "#8984A1",
+    white: "#ffffff",
   },
 };
 
