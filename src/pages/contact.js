@@ -1,6 +1,7 @@
 import Menu from "../components/Menu";
 import CardImage from "../components/CardImage";
 import { ContactContainer } from "../styles/Contact";
+import Input from "../components/Input";
 
 export default function Contact() {
   return (
@@ -17,6 +18,16 @@ export default function Contact() {
             Jakarta Selatan, 12920.
           </p>
         </div>
+
+        <div className="wrapper-paragraph--space vision">
+          <h5 className="text-primary">Email</h5>
+          <p>info@62trade.com</p>
+        </div>
+
+        <Input type="text" placeholder="Full name" full mb={10} />
+        <Input type="text" placeholder="Email address" full mb={10} />
+        <Input as="textarea" placeholder="Your message here" full mb={10} />
+
         <CardImage
           copyrightText="Copyright 2021 62Trade.com PT. Enam Dua Niaga"
           src="/images/contact.png"
