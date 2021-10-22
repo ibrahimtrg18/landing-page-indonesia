@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import CardImage from "../components/CardImage";
 import { HomeContainer } from "../styles/Home";
 
 export default function Home() {
@@ -23,6 +24,11 @@ export default function Home() {
         </p>
         <p>Let us walk together, hand in hand for a better future.</p>
       </div>
+      <CardImage
+        copyrightText="Copyright 2021 62Trade.com PT. Enam Dua Niaga"
+        src="/images/about.png"
+        alt="about image"
+      />
     </HomeContainer>
   );
 }
