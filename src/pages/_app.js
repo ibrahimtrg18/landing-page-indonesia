@@ -32,9 +32,28 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1em;
   }
 
+  ul{
+    list-style: none;
+  }
+
   .wrapper-paragraph{
     & > p {
       margin-bottom: 20px;
+    }
+    & > h5{
+      margin-bottom: 15px;
+      & + p{
+        margin-bottom: 0;
+      }
+    }
+    &--space{
+      margin-bottom: 30px;
+      & > h5{
+        margin-bottom: 15px;
+        & + p{
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
