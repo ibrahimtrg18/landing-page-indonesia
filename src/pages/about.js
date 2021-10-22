@@ -1,11 +1,11 @@
 import Menu from "../components/Menu";
 import CardImage from "../components/CardImage";
-import { HomeContainer } from "../styles/Home";
+import { AboutContainer } from "../styles/About";
 
-export default function Home() {
+export default function About() {
   return (
     <>
-      <HomeContainer>
+      <AboutContainer>
         <h1 className="title text-primary">About Us</h1>
         <p>
           Spanning from East to West. With 54,000 km Coastline and 17,500
@@ -31,7 +31,7 @@ export default function Home() {
           src="/images/about.png"
           alt="about image"
         />
-      </HomeContainer>
+      </AboutContainer>
       <Menu />
     </>
   );
