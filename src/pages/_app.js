@@ -1,6 +1,14 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Layout from "../components/Layout";
 
+const theme = {
+  colors: {
+    primary: "#3E2E83",
+    lightPrimary: "#776FC4",
+    text: "#8984A1",
+  },
+};
+
 const GlobalStyle = createGlobalStyle`
   *{
     margin:0;
@@ -11,41 +19,58 @@ const GlobalStyle = createGlobalStyle`
   html, body{
     font-family: Helvetica;
     font-size: 16px;
+    color: ${({ theme }) => theme.colors.text};
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  .wrapper-paragraph{
+    & > p {
+      margin-bottom: 20px;
+    }
   }
 
   @font-face {
   font-family: Helvetica;
   src: url("/fonts/Helvetica/Helvetica-Regular.ttf");
-  font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-style: normal;
   }
 
   @font-face {
     font-family: Helvetica;
     src: url("/fonts/Helvetica/Helvetica-Bold.ttf");
-    font-style: normal;
     font-weight: 700;
-    font-display: swap;
+    font-style: normal;
   }
-`;
 
-const theme = {
-  colors: {
-    primary: "#3E2E83",
-  },
-};
+  ${({ theme }) => {
+    let textColors = ``;
+    Object.keys(theme.colors).map((key) => {
+      textColors += `
+        .text-${key}{
+          color: ${theme.colors[key]}
+        }
+      `;
+    });
+    return textColors;
+  }}
+`;
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
-    </>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   );
 }
 
