@@ -7,6 +7,7 @@ export const MenuList = styled.div`
   gap: 20px;
   height: max-content;
   padding: 20px;
+
   background: linear-gradient(
       180deg,
       rgba(119, 111, 196, 0.1) 19.89%,
@@ -15,7 +16,6 @@ export const MenuList = styled.div`
     #ffffff;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  margin-top: 60px;
 
   width: 100%;
   position: fixed;
@@ -23,6 +23,21 @@ export const MenuList = styled.div`
   z-index: 10;
 
   @media screen and (min-width: 481px) {
+    flex-direction: column;
+    margin-top: 0;
+
+    background: linear-gradient(
+      90deg,
+      rgba(119, 111, 196, 0.1) 17.11%,
+      rgba(119, 111, 196, 0) 93.66%
+    );
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    width: unset;
+    position: unset;
+    bottom: unset;
+    z-index: unset;
   }
 `;
 

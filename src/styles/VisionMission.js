@@ -19,11 +19,6 @@ export const VisionMissionContainer = styled.div`
         display: none;
       }
     }
-
-    & > ${MenuList} {
-      flex-direction: column;
-      margin-top: 0;
-    }
   }
 
   @media screen and (min-width: 769px) {
@@ -37,11 +32,6 @@ export const VisionMissionContainer = styled.div`
       & ${CopyRight} {
         display: none;
       }
-    }
-
-    & > ${MenuList} {
-      flex-direction: column;
-      margin-top: 0;
     }
   }
 `;
