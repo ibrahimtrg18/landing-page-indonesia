@@ -1,12 +1,15 @@
 import Image from "next/image";
 import Menu from "../components/Menu";
 import CardImage from "../components/CardImage";
-import { VisionMissionContainer } from "../styles/VisionMission";
+import {
+  VisionMissionContainer,
+  VisionMissionContent,
+} from "../styles/VisionMission";
 
 export default function VisionMission() {
   return (
-    <>
-      <VisionMissionContainer>
+    <VisionMissionContainer>
+      <VisionMissionContent>
         <h1 className="title text-primary">Vision Mission</h1>
         <div className="wrapper-paragraph--space vision">
           <h5 className="text-primary">Our Vision</h5>
@@ -40,13 +43,13 @@ export default function VisionMission() {
             objectFit="contain"
           />
         </div>
-        <CardImage
-          copyrightText="Copyright 2021 62Trade.com PT. Enam Dua Niaga"
-          src="/images/visionmission.png"
-          alt="about image"
-        />
-      </VisionMissionContainer>
+      </VisionMissionContent>
+      <CardImage
+        copyrightText="Copyright 2021 62Trade.com PT. Enam Dua Niaga"
+        src="/images/visionmission.png"
+        alt="about image"
+      />
       <Menu />
-    </>
+    </VisionMissionContainer>
   );
 }

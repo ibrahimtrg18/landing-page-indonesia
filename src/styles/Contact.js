@@ -1,6 +1,30 @@
+"use strict";
 import styled from "styled-components";
+import { MenuList } from "../components/Menu/styles";
+import { CardImageContainer, CopyRight } from "../components/CardImage/styles";
 
 export const ContactContainer = styled.div`
+  @media screen and (min-width: 481px) {
+    display: grid;
+    grid-template-columns: minmax(50px, 250px) 1fr max-content;
+
+    & > ${CardImageContainer} {
+      grid-column-start: 1;
+      grid-row-start: 1;
+
+      & ${CopyRight} {
+        display: none;
+      }
+    }
+
+    & > ${MenuList} {
+      flex-direction: column;
+      margin-top: 0;
+    }
+  }
+`;
+
+export const ContactContent = styled.div`
   padding: 15px;
 
   & > .title {

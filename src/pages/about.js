@@ -1,11 +1,11 @@
 import Menu from "../components/Menu";
 import CardImage from "../components/CardImage";
-import { AboutContainer } from "../styles/About";
+import { AboutContainer, AboutContent } from "../styles/About";
 
 export default function About() {
   return (
-    <>
-      <AboutContainer>
+    <AboutContainer>
+      <AboutContent>
         <h1 className="title text-primary">About Us</h1>
         <p>
           Spanning from East to West. With 54,000 km Coastline and 17,500
@@ -26,13 +26,13 @@ export default function About() {
           </p>
           <p>Let us walk together, hand in hand for a better future.</p>
         </div>
-        <CardImage
-          copyrightText="Copyright 2021 62Trade.com PT. Enam Dua Niaga"
-          src="/images/about.png"
-          alt="about image"
-        />
-      </AboutContainer>
+      </AboutContent>
+      <CardImage
+        copyrightText="Copyright 2021 62Trade.com PT. Enam Dua Niaga"
+        src="/images/about.png"
+        alt="about image"
+      />
       <Menu />
-    </>
+    </AboutContainer>
   );
 }

@@ -1,12 +1,12 @@
 import Menu from "../components/Menu";
 import CardImage from "../components/CardImage";
-import { ContactContainer } from "../styles/Contact";
+import { ContactContainer, ContactContent } from "../styles/Contact";
 import Input from "../components/Input";
 
 export default function Contact() {
   return (
-    <>
-      <ContactContainer>
+    <ContactContainer>
+      <ContactContent>
         <h1 className="title text-primary">Contact</h1>
         <div className="wrapper-paragraph--space vision">
           <h5 className="text-primary">Location</h5>
@@ -27,14 +27,13 @@ export default function Contact() {
         <Input type="text" placeholder="Full name" full mb={10} />
         <Input type="text" placeholder="Email address" full mb={10} />
         <Input as="textarea" placeholder="Your message here" full mb={10} />
-
-        <CardImage
-          copyrightText="Copyright 2021 62Trade.com PT. Enam Dua Niaga"
-          src="/images/contact.png"
-          alt="about image"
-        />
-      </ContactContainer>
+      </ContactContent>
+      <CardImage
+        copyrightText="Copyright 2021 62Trade.com PT. Enam Dua Niaga"
+        src="/images/contact.png"
+        alt="about image"
+      />
       <Menu />
-    </>
+    </ContactContainer>
   );
 }
