@@ -28,6 +28,8 @@ export const MenuItem = styled.button`
   font-weight: bold;
   min-width: 80px;
   min-height: 80px;
+  box-shadow: 0px 9.48px 11.85px rgba(62, 46, 131, 0.2);
+  border-radius: 15.8px;
 
   ${({ isActive, theme }) => {
     if (isActive) {
@@ -35,7 +37,7 @@ export const MenuItem = styled.button`
         background-color: ${theme.colors.primary};
         color: ${theme.colors.white};
         & > svg {
-          & > path {
+          & path {
               stroke: ${theme.colors.white};
             }
         }`;
@@ -44,7 +46,7 @@ export const MenuItem = styled.button`
         background-color: ${theme.colors.white};
         color: ${theme.colors.primary};
         & > svg {
-          & > path {
+          & path {
               stroke: ${theme.colors.primary};
             }
         }`;
