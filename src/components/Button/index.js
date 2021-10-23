@@ -8,6 +8,8 @@ const Button = styled.button`
   font-size: 0.875em;
   font-weight: bold;
   padding: 8px 24px;
+  margin-top: ${({ mt }) => mt}px;
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
 `;
 
 export default Button;
