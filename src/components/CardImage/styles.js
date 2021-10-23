@@ -10,12 +10,11 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 38px;
   border-radius: 25px;
   &::before {
     content: "";
     width: calc(100% - 40px);
-    height: 100%;
+    height: calc(100% + 55px);
     position: absolute;
     border-radius: 25px;
     box-shadow: 0 28px 30px 0 rgb(204 209 211 / 80%);
@@ -37,6 +36,7 @@ export const ImageContainer = styled.div`
 export const Image = styled.img``;
 
 export const CopyRight = styled.p`
+  margin-top: 73px;
   font-size: 12px;
   text-align: center;
 `;

@@ -22,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
   html, body{
     font-family: Helvetica;
     font-size: 16px;
-    line-height: 125%;
     color: ${({ theme }) => theme.colors.text};
     background-image: url("/images/rectangle.svg");
     background-repeat: no-repeat;
@@ -51,6 +50,20 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  input,
+  button,
+  span,
+  li,
+  a {
+    line-height: 125%;
+  }
+
   img {
     width:100%;
     height:auto;
@@ -73,6 +86,12 @@ const GlobalStyle = createGlobalStyle`
         & + p{
           margin-bottom: 0;
         }
+      }
+    }
+    
+    @media screen and (min-width: 481px) {
+      & > p {
+        margin-bottom: 30px;
       }
     }
   }
