@@ -31,6 +31,21 @@ export const MenuItem = styled.button`
   min-height: 80px;
   box-shadow: 0px 9.48px 11.85px rgba(62, 46, 131, 0.2);
   border-radius: 15.8px;
+  cursor: pointer;
+
+  &:hover {
+    ${({ isActive, theme }) =>
+      !isActive &&
+      `
+      background: ${theme.colors.lightPrimary};
+      color: ${theme.colors.white};
+      & > svg {
+        & * {
+          stroke: ${theme.colors.white};
+        }
+      }
+      `};
+  }
 
   ${({ isActive, theme }) => {
     if (isActive) {
@@ -38,7 +53,7 @@ export const MenuItem = styled.button`
         background-color: ${theme.colors.primary};
         color: ${theme.colors.white};
         & > svg {
-          & path {
+          & * {
               stroke: ${theme.colors.white};
             }
         }`;
@@ -47,7 +62,7 @@ export const MenuItem = styled.button`
         background-color: ${theme.colors.white};
         color: ${theme.colors.primary};
         & > svg {
-          & path {
+          & * {
               stroke: ${theme.colors.primary};
             }
         }`;
