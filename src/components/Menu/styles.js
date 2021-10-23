@@ -4,8 +4,9 @@ export const MenuList = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
   gap: 20px;
+  height: max-content;
+  padding: 20px;
   background: linear-gradient(
       180deg,
       rgba(119, 111, 196, 0.1) 19.89%,
