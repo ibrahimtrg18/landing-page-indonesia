@@ -1,9 +1,15 @@
+import ReCAPTCHA from "react-google-recaptcha";
 import Menu from "../components/Menu";
 import CardImage from "../components/CardImage";
 import { ContactContainer, ContactContent } from "../styles/Contact";
 import Input from "../components/Input";
+import Button from "../components/Button";
 
 export default function Contact() {
+  const onChange = (value) => {
+    console.log("Captcha value:", value);
+  };
+
   return (
     <ContactContainer>
       <ContactContent>
@@ -27,6 +33,11 @@ export default function Contact() {
         <Input type="text" placeholder="Full name" full mb={10} />
         <Input type="text" placeholder="Email address" full mb={10} />
         <Input as="textarea" placeholder="Your message here" full mb={10} />
+        <ReCAPTCHA
+          sitekey="6Le8QOwcAAAAADB1cwJq9BfpLlH7hLJTrh2DtjsH"
+          onChange={onChange}
+        />
+        <Button>Send Message</Button>
       </ContactContent>
       <CardImage
         copyrightText="Copyright 2021 62Trade.com PT. Enam Dua Niaga"
