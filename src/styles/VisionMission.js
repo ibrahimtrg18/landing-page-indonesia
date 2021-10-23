@@ -4,7 +4,10 @@ import { MenuList } from "../components/Menu/styles";
 import { CardImageContainer, CopyRight } from "../components/CardImage/styles";
 
 export const VisionMissionContainer = styled.div`
+  padding-bottom: 124px;
+
   @media screen and (min-width: 481px) {
+    padding-bottom: unset;
     display: grid;
     grid-template-columns: minmax(50px, 200px) 1fr max-content;
 

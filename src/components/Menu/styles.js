@@ -13,8 +13,17 @@ export const MenuList = styled.div`
       rgba(119, 111, 196, 0) 99.15%
     ),
     #ffffff;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   margin-top: 60px;
+
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+
+  @media screen and (min-width: 481px) {
+  }
 `;
 
 export const MenuItem = styled.button`
