@@ -57,6 +57,15 @@ export const ContactContent = styled.div`
     font-size: 0.8em;
   }
 
+  & > form {
+    & > p {
+      font-size: 10px;
+      color: ${({ theme }) => theme.colors.danger};
+      margin: 8px 0;
+      line-height: 100%;
+    }
+  }
+
   @media screen and (min-width: 481px) {
     padding: 20px;
 
