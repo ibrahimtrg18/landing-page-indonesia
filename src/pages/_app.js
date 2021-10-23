@@ -9,6 +9,7 @@ const theme = {
     primary: "#3E2E83",
     lightPrimary: "#776FC4",
     white: "#ffffff",
+    danger: "#df2828",
   },
 };
 
