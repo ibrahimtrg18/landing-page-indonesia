@@ -7,7 +7,6 @@ const Input = styled.input`
   padding: 10px 16px;
   font-size: 13px;
   font-family: "Helvetica";
-  line-height: 125%;
   color: ${({ theme }) => theme.colors.text};
   background-color: ${({ theme }) => theme.colors.white};
   border: 1px solid ${({ theme }) => theme.colors.borderInput};
