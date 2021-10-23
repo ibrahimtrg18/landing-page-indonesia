@@ -22,7 +22,21 @@ const GlobalStyle = createGlobalStyle`
   html, body{
     font-family: Helvetica;
     font-size: 16px;
+    line-height: 125%;
     color: ${({ theme }) => theme.colors.text};
+    background-image: url("/images/rectangle.svg");
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position-x: -60px;
+
+    @media screen and (min-width: 481px){
+      background-size: unset;
+      background-position-x: unset;
+    }
+  }
+
+  main{
+    margin: 20px 0;
   }
 
   h1 {
@@ -33,8 +47,13 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1em;
   }
 
-  ul{
+  ul {
     list-style: none;
+  }
+
+  img {
+    width:100%;
+    height:auto;
   }
 
   .wrapper-paragraph{
