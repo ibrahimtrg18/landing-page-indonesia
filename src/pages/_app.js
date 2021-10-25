@@ -20,23 +20,26 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body{
-    font-family: Helvetica;
-    font-size: 16px;
-    color: ${({ theme }) => theme.colors.text};
+  html{
     background-image: url("/images/rectangle.svg");
     background-repeat: no-repeat;
     background-size: 200px;
     background-position-x: -60px;
-
     @media screen and (min-width: 481px){
       background-size: unset;
       background-position-x: unset;
     }
   }
 
+  body{
+    font-family: Helvetica;
+    font-size: 16px;
+    color: ${({ theme }) => theme.colors.text};
+
+  }
+
   main{
-    margin: 20px 0;
+    margin: 90px 0;
   }
 
   h1 {

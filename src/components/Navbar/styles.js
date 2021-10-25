@@ -7,14 +7,17 @@ export const AppBar = styled.nav`
   align-items: center;
   width: 100%;
 
-  padding: 20px 16px;
+  padding: 30px 16px;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.primary};
   transition: all 0.2s ease-in-out;
+  position: fixed;
+  top: 0;
 
   ${({ transparent, theme }) =>
     !transparent &&
     `
+      padding: 20px 16px;
       background-color: ${theme.colors.white};
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
       position: fixed;
